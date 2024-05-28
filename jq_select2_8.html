@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery.js"></script> 
+    <script>
+        //jquery 기본 형식
+        $(function(){
+            var arr1=["서울","대전","대구","부산"];
+            //map 메소드 
+            var arr2 = $.map(arr1,function(value,index){
+                if (index==1) {
+                    return value;
+                }
+            });
+            console.log(arr2);
+            console.log("===First End===");
+            
+            var arr3 = $.grep(arr1,function(a,b){//a는 배열원소값 참거짓을 이용해서 출력
+                // return a;
+                if (a=="부산") {
+                    return true;
+                } else {
+                    return false;
+                }
+            });
+            console.log(arr3);
+            
+        });
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
